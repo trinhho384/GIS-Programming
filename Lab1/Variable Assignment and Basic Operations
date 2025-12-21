@@ -1,0 +1,92 @@
+#Question 1
+def question1():
+    NYC = {
+        "latitude" : 40.7128,
+        "longitude": -74.0060,
+        "population": 8336817,
+        "area":  783.8,
+    }
+    density = NYC["population"] / NYC["area"]
+    density = round(density, 2)
+    print("Population density of New York City", density)
+    print(f"Latitude {NYC["latitude"]}, Longitude: {NYC["longitude"]}")
+#Question 2
+
+def question2():
+    city_name = "San Francisco"
+    city_name_lowercase = city_name.lower()
+    city_name_uppercase = city_name.upper()
+    city_name = city_name.replace("San", "Los")
+    print(city_name)
+    print(city_name_lowercase)
+    print(city_name_uppercase)
+#Question 3
+def question3():
+    city = [
+        ("New York City:", 40.7128, -74.0060),
+        ("Los Angeles:", 34.0522, -118.2437),
+        ("Chicago:", 41.8781, -87.6928),
+    ]
+    city.append(("Miami: ", 25.7617, -80.1918))
+    print(city)
+    print(city[:2])
+# Question 4
+def question4():
+    Effiel_tower = (48.8584, 2.2945)
+    print(Effiel_tower)
+#Question 5
+def question5():
+    country_visited = {"USA", "Singapore", "Vietnam", "Taiwan"}
+    print(country_visited)
+    country_visited.add("China")
+    country_visited.add("China")
+    print(country_visited)
+def question6():
+    geospatial_feature = {
+        "Name: ": "Amazon River",
+        "Length:": 6400, #km
+        "Countries:": ["Brazil","Peru","Colombia"]
+    }
+    geospatial_feature["river flow"] = 209000 # m^2/s
+    print(geospatial_feature)
+    geospatial_feature["Length:"] = 6992 #km
+    print(geospatial_feature)
+def question7():
+    city = {
+        "Name:": "Tokyo",
+        "Population:": 13515271,
+        "Coordinates:": (35.6895, 139.6917),
+    }
+    print("City population: ", city["Population:"])
+    print("City longitude: ", city["Coordinates:"][1])
+    city["Population:"] = 14000000
+    print("City population: ", city["Population:"])
+def question8():
+    city = [
+        ("New York City", 40.7128, -74.0060),
+        ("Los Angeles", 34.0522, -118.2437),
+        ("Chicago", 41.8781, -87.6928),
+    ]
+    city.append(("Miami", 25.7617, -80.1918))
+    city_name = []
+    for i in range(len(city)):
+        city_name.append(city[i][0])
+    city_name.sort()
+    print(city_name)
+    city_name = city_name[:len(city_name) - 1]
+    print(city_name)
+def question9():
+    locations = [
+        ("Mount Everest", 27.9881, 86.9250),
+        ("K2", 35.8808, 76.5155),
+        ("Kangchenjunga", 27.7025, 88.1475),
+    ]
+    location_name = []
+    location_dict = {}
+    for i in range(len(locations)):
+        name = locations[i][0]
+        lat = locations[i][1]
+        lon = locations[i][2]
+        location_name.append(name)
+        location_dict[name] = (lat, lon)
+    print(location_dict["K2"][0])
